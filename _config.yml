@@ -1,0 +1,49 @@
+title: Brain Dump
+email: getmoneygetpaid91@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  This blog is my mental dumping ground for all my random projects
+  and interests. It will include posts about maker culture, coding,
+  cnc projects, lasers, open source, sustainable solutions, and whatever else
+  I feel interested in at any point in time.
+permalink: ':title/'
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Author settings
+author: Aaron Peterson # add your name
+author-pic: aaron.jpg
+about-author: My name is Aaron Peterson. I make things and share them with others. You should too.
+
+# Contact links
+email: getmoneygetpaid91@gmail.com
+phone: # Add your Phone number
+website: github.com/ArmoredBlood
+linkedin: aaron-peterson-80a50633/
+github: ArmoredBlood # Add your Github handle
+twitter:  Analyst_Aaron
+facebook: # Add your Facebook handle
+instagram: # Add your Instagram handle
+pinterest: # Add your Pinterest handle
+
+# Newsletter
+mailchimp: # Add your MailChimp form identifier.
+
+# Disqus
+discus_identifier: ArmoredBlood # Add your discus identifier
+
+# Tracker
+analytics: # Google Analytics
+
+# Paginate
+paginate: 6
+paginate_path: /page:num/
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+
+include: [_pages]
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
