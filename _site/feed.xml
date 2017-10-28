@@ -1,5 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-10-27T17:57:58-05:00</updated><id>http://localhost:4000/</id><title type="html">Brain Dump</title><subtitle>This blog is my mental dumping ground for all my random projects and interests. It will include posts about maker culture, coding, cnc projects, lasers, open source, sustainable solutions, and whatever else I feel interested in at any point in time.
-</subtitle><author><name>Aaron Peterson</name></author><entry><title type="html">Formatting Reference</title><link href="http://localhost:4000/formatting-reference/" rel="alternate" type="text/html" title="Formatting Reference" /><published>2017-10-27T09:54:20-05:00</published><updated>2017-10-27T09:54:20-05:00</updated><id>http://localhost:4000/formatting-reference</id><content type="html" xml:base="http://localhost:4000/formatting-reference/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-10-28T17:16:30-05:00</updated><id>http://localhost:4000/</id><title type="html">Brain Dump</title><subtitle>This blog is my mental dumping ground for all my random projects and interests. It will include posts about maker culture, coding, cnc projects, lasers, open source, sustainable solutions, and whatever else I feel interested in at any point in time.
+</subtitle><author><name>Aaron Peterson</name></author><entry><title type="html">eMQTT Broker + Raspberry Pi + Docker</title><link href="http://localhost:4000/MQTT-Broker-with-Rpi3/" rel="alternate" type="text/html" title="eMQTT Broker + Raspberry Pi + Docker" /><published>2017-10-28T07:00:20-05:00</published><updated>2017-10-28T07:00:20-05:00</updated><id>http://localhost:4000/MQTT-Broker-with-Rpi3</id><content type="html" xml:base="http://localhost:4000/MQTT-Broker-with-Rpi3/">&lt;p&gt;Today I started working on actualizing my home automation system that I’ve been planning for a while. The first step was building a platform that any wifi enabled device can communicate with and post information to. With that brief introduction, let’s jump right in.&lt;/p&gt;
+
+&lt;h2 id=&quot;mqtt&quot;&gt;MQTT&lt;/h2&gt;
+&lt;p&gt;My research pointed towards the MQTT protocol as a lightweight publish/subscribe messaging system. Connected devices can “publish” messages or data to “topics” which other devices can “subscribe” to and be notified with new messages are posted to that topic, much like how you can subscribe to a Youtube channel and be notified when new videos are uploaded.&lt;/p&gt;
+
+&lt;p&gt;After looking around briefly at different MQTT brokers, I settled on eMQTT over at &lt;a href=&quot;http://emqtt.io/&quot;&gt;emqtt.io&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;from their website:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;EMQ (Erlang MQTT Broker) is a distributed, massively scalable, highly extensible MQTT message broker written in Erlang/OTP.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;EMQ is fully open source and licensed under the Apache Version 2.0. EMQ implements both MQTT V3.1 and V3.1.1 protocol specifications, and supports MQTT-SN, CoAP, WebSocket, STOMP and SockJS at the same time.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/EMQTT.png&quot; alt=&quot;emq-diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;docker&quot;&gt;Docker&lt;/h2&gt;
+&lt;p&gt;I chose Docker for this project simply because I’m trying to grow my skills and become more familiar with it. This is the only application running on the pi so there’s no reason to actually use Docker. If anything, it will help keep the application compartmentalized in the event of a security breach.&lt;/p&gt;
+
+&lt;h2 id=&quot;raspberry-pi-3&quot;&gt;Raspberry Pi 3&lt;/h2&gt;
+&lt;p&gt;I had a spare Raspberry Pi 3 laying around that I figured would be best suited for this job due to its low power usage and footprint. I realize the pi isn’t the best hardware platform for actual production use due to the SD card’s write lifespan, but with this setup it would be easy to create an image of the setup to restore on a new card or even just go through the process again since docker makes it super easy to replicate the setup in just a few minutes.&lt;/p&gt;
+
+&lt;h2 id=&quot;setup&quot;&gt;Setup&lt;/h2&gt;
+
+&lt;p&gt;Here are the steps I used to get it working and the resources I used along thew way:&lt;/p&gt;
+
+&lt;p&gt;Flash &lt;a href=&quot;https://www.raspberrypi.org/downloads/raspbian/&quot;&gt;Raspbian Lite&lt;/a&gt; to a microsd card using &lt;a href=&quot;https://etcher.io/&quot;&gt;Etcher&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Boot into raspbian and change the default admin password. Default login is pi:raspberry&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;passwd&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Update the pi’s package listings and upgrade to the latest versions&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt upgrade&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Install Docker via their convenience script. This is the only &lt;a href=&quot;https://docs.docker.com/engine/installation/linux/docker-ce/debian/#set-up-the-repository&quot;&gt;Docker approved&lt;/a&gt; way of installation on a raspberry pi. Be sure to read over the script before execution so you know what you’re getting yourself into. I’m not your mother, so do whatever you want.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;curl &lt;span class=&quot;nt&quot;&gt;-sSL&lt;/span&gt; https://get.docker.com | sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Verify that the Docker daemon is running. I also like to reboot and run the below command again just to validate that it starts at boot.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;systemctl show &lt;span class=&quot;nt&quot;&gt;--property&lt;/span&gt; ActiveState docker&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Install Git via rasbian’s package manager.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt install git&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Install the docker EMQ container. I found the official EMQ docker container difficult to install, though this container makes it very simple. It is maintained by docker user &lt;a href=&quot;https://hub.docker.com/r/aksakalli/rpi-emq/&quot;&gt;aksakalli&lt;/a&gt;.
+A few notes about this command. &lt;code class=&quot;highlighter-rouge&quot;&gt;-d&lt;/code&gt; makes the container process run in the background so you maintain console access. &lt;code class=&quot;highlighter-rouge&quot;&gt;--restart unless-stopped&lt;/code&gt; starts the container whenever docker is restarted, unless the container was manually stopped. Port 18083 is being mapped to the host(rpi) for access to the EMQ dashboard.  Port 1883 is being mapped to the host for incoming/outgoing MQTT messages.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;docker run &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--restart&lt;/span&gt; unless-stopped &lt;span class=&quot;nt&quot;&gt;-ti&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; emq &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 18083:18083 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 1883:1883 aksakalli/rpi-emq&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Once completed, access the EMQ dashboard at &lt;insert rpi=&quot;&quot; ip=&quot;&quot; address=&quot;&quot; here=&quot;&quot;&gt;:18083. Default login is admin:public&lt;/insert&gt;&lt;/p&gt;
+
+&lt;p&gt;Select the &lt;code class=&quot;highlighter-rouge&quot;&gt;Admins&lt;/code&gt; tab on the left, select the &lt;code class=&quot;highlighter-rouge&quot;&gt;edit&lt;/code&gt; button for the admin user, and change the default password.&lt;/p&gt;
+
+&lt;p&gt;(Optional) Create other user accounts for other devices you want to connect. They will still be admin accounts, so I’m not sure if there’s any advantage to doing that or not.&lt;/p&gt;
+
+&lt;p&gt;(Optional) Select &lt;code class=&quot;highlighter-rouge&quot;&gt;Plugins&lt;/code&gt; and activate an authentication plugin for posting messages. I used emq_auth_username for basic username:pass authentication.&lt;/p&gt;
+
+&lt;p&gt;That’s as far as I’ve gotten with this setup. EMQ has a lot of plugin extensions and capabilities that I’m not using currently. Down the road I’ll be looking into SSL encryption for my messages, but it’s another layer of complexity that I have no experience with… yet.&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading, I hope you learned as much reading this as I did writing it.&lt;/p&gt;</content><author><name>Aaron Peterson</name></author><category term="home_automation" /><category term="raspberry_pi" /><category term="docker" /><summary type="html">Today I started working on actualizing my home automation system that I’ve been planning for a while. The first step was building a platform that any wifi enabled device can communicate with and post information to. With that brief introduction, let’s jump right in.</summary></entry><entry><title type="html">Formatting Reference</title><link href="http://localhost:4000/formatting-reference/" rel="alternate" type="text/html" title="Formatting Reference" /><published>2017-10-27T09:54:20-05:00</published><updated>2017-10-27T09:54:20-05:00</updated><id>http://localhost:4000/formatting-reference</id><content type="html" xml:base="http://localhost:4000/formatting-reference/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 

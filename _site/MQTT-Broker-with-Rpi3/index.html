@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>eMQTT Broker + Raspberry Pi + Docker - Brain Dump</title>
+	<meta name="description" content="Guide on how to setup a EMQ message broker in a docker container on a raspberry pi 3 for home automation and IoT experimentation.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#311e3e">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#311e3e">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#311e3e">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+  <div class="flex-container">
+  <header class="main-header">
+  <div class="wrapper">
+    <div class="header-flex">
+      <div class="menu-icon-container">
+        <span class="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+      </div>
+      <nav class="main-nav">
+        <span class="menu-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/tags">Categories</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+      <p class="logo"><a href="/">Brain Dump</a></p>
+      <div class="search-icon-container">
+        <span class="search-icon"><a><i class="fa fa-search" aria-hidden="true"></i></a></span>
+      </div>
+    </div>
+  </div>
+</header> <!-- End Header -->
+
+  <article class="article-page">
+    <div class="page-image">
+      <div class="cover-image" style="background: url(/assets/img/EMQTT.png) center no-repeat; background-size: cover;"></div>
+    </div>
+    <div class="wrapper">
+      <div class="page-content">
+        <div class="header-page">
+          <h1 class="page-title">eMQTT Broker + Raspberry Pi + Docker</h1>
+          <div class="page-date"><time datetime="2017-10-28 07:00:20 -0500">2017, Oct 28</time></div>
+        </div>
+        <p>Today I started working on actualizing my home automation system that I’ve been planning for a while. The first step was building a platform that any wifi enabled device can communicate with and post information to. With that brief introduction, let’s jump right in.</p>
+
+<h2 id="mqtt">MQTT</h2>
+<p>My research pointed towards the MQTT protocol as a lightweight publish/subscribe messaging system. Connected devices can “publish” messages or data to “topics” which other devices can “subscribe” to and be notified with new messages are posted to that topic, much like how you can subscribe to a Youtube channel and be notified when new videos are uploaded.</p>
+
+<p>After looking around briefly at different MQTT brokers, I settled on eMQTT over at <a href="http://emqtt.io/">emqtt.io</a>.</p>
+
+<p>from their website:</p>
+<blockquote>
+  <p>EMQ (Erlang MQTT Broker) is a distributed, massively scalable, highly extensible MQTT message broker written in Erlang/OTP.</p>
+</blockquote>
+
+<blockquote>
+  <p>EMQ is fully open source and licensed under the Apache Version 2.0. EMQ implements both MQTT V3.1 and V3.1.1 protocol specifications, and supports MQTT-SN, CoAP, WebSocket, STOMP and SockJS at the same time.</p>
+</blockquote>
+
+<p><img src="/assets/img/EMQTT.png" alt="emq-diagram" /></p>
+
+<h2 id="docker">Docker</h2>
+<p>I chose Docker for this project simply because I’m trying to grow my skills and become more familiar with it. This is the only application running on the pi so there’s no reason to actually use Docker. If anything, it will help keep the application compartmentalized in the event of a security breach.</p>
+
+<h2 id="raspberry-pi-3">Raspberry Pi 3</h2>
+<p>I had a spare Raspberry Pi 3 laying around that I figured would be best suited for this job due to its low power usage and footprint. I realize the pi isn’t the best hardware platform for actual production use due to the SD card’s write lifespan, but with this setup it would be easy to create an image of the setup to restore on a new card or even just go through the process again since docker makes it super easy to replicate the setup in just a few minutes.</p>
+
+<h2 id="setup">Setup</h2>
+
+<p>Here are the steps I used to get it working and the resources I used along thew way:</p>
+
+<p>Flash <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Lite</a> to a microsd card using <a href="https://etcher.io/">Etcher</a>.</p>
+
+<p>Boot into raspbian and change the default admin password. Default login is pi:raspberry</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">passwd</code></pre></figure>
+
+<p>Update the pi’s package listings and upgrade to the latest versions</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nb">sudo </span>apt update <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt upgrade</code></pre></figure>
+
+<p>Install Docker via their convenience script. This is the only <a href="https://docs.docker.com/engine/installation/linux/docker-ce/debian/#set-up-the-repository">Docker approved</a> way of installation on a raspberry pi. Be sure to read over the script before execution so you know what you’re getting yourself into. I’m not your mother, so do whatever you want.</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl <span class="nt">-sSL</span> https://get.docker.com | sh</code></pre></figure>
+
+<p>Verify that the Docker daemon is running. I also like to reboot and run the below command again just to validate that it starts at boot.</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">systemctl show <span class="nt">--property</span> ActiveState docker</code></pre></figure>
+
+<p>Install Git via rasbian’s package manager.</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nb">sudo </span>apt install git</code></pre></figure>
+
+<p>Install the docker EMQ container. I found the official EMQ docker container difficult to install, though this container makes it very simple. It is maintained by docker user <a href="https://hub.docker.com/r/aksakalli/rpi-emq/">aksakalli</a>.
+A few notes about this command. <code class="highlighter-rouge">-d</code> makes the container process run in the background so you maintain console access. <code class="highlighter-rouge">--restart unless-stopped</code> starts the container whenever docker is restarted, unless the container was manually stopped. Port 18083 is being mapped to the host(rpi) for access to the EMQ dashboard.  Port 1883 is being mapped to the host for incoming/outgoing MQTT messages.</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nb">sudo </span>docker run <span class="nt">-d</span> <span class="nt">--restart</span> unless-stopped <span class="nt">-ti</span> <span class="nt">--name</span> emq <span class="nt">-p</span> 18083:18083 <span class="nt">-p</span> 1883:1883 aksakalli/rpi-emq</code></pre></figure>
+
+<p>Once completed, access the EMQ dashboard at <insert rpi="" ip="" address="" here="">:18083. Default login is admin:public</insert></p>
+
+<p>Select the <code class="highlighter-rouge">Admins</code> tab on the left, select the <code class="highlighter-rouge">edit</code> button for the admin user, and change the default password.</p>
+
+<p>(Optional) Create other user accounts for other devices you want to connect. They will still be admin accounts, so I’m not sure if there’s any advantage to doing that or not.</p>
+
+<p>(Optional) Select <code class="highlighter-rouge">Plugins</code> and activate an authentication plugin for posting messages. I used emq_auth_username for basic username:pass authentication.</p>
+
+<p>That’s as far as I’ve gotten with this setup. EMQ has a lot of plugin extensions and capabilities that I’m not using currently. Down the road I’ll be looking into SSL encryption for my messages, but it’s another layer of complexity that I have no experience with… yet.</p>
+
+<p>Thanks for reading, I hope you learned as much reading this as I did writing it.</p>
+
+        <div class="page-footer">
+          <div class="page-tag">
+            <span>Tags:</span>
+            
+            <a href="/tags#home_automation" class="tag">| home_automation</a>
+            
+            <a href="/tags#raspberry_pi" class="tag">| raspberry_pi</a>
+            
+            <a href="/tags#docker" class="tag">| docker</a>
+            
+          </div><!-- End Tags -->
+          <div class="page-share">
+            <span>Share:</span>
+            <a href="https://twitter.com/intent/tweet?text=eMQTT Broker + Raspberry Pi + Docker&url=http://localhost:4000/MQTT-Broker-with-Rpi3/" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://facebook.com/sharer.php?u=http://localhost:4000/MQTT-Broker-with-Rpi3/" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://plus.google.com/share?url=http://localhost:4000/MQTT-Broker-with-Rpi3/" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+          </div><!-- End Share -->
+        </div>
+        <section class="author-box">
+  <img src="/assets/img/aaron.jpg" alt="Aaron Peterson" class="author-img">
+  <div class="author-desc">
+    <h2>Aaron Peterson</h2>
+    <p>My name is Aaron Peterson. I make things and share them with others. You should too.</p>
+    <ul>
+      
+        <li class="email"><a href="mailto:getmoneygetpaid91@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+      
+<!--
+      
+        <li class="phone"><a href="tel:044 825 5523"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+      
+-->
+      
+        <li class="website"><a href="http://github.com/ArmoredBlood" target="_blank"><i class="fa fa-globe"></i></a></li>
+      
+      
+        <li class="twitter"><a href="https://twitter.com/Analyst_Aaron" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      
+    </ul>
+  </div>
+</section>
+
+        <div class="recent-box">
+  <h2 class="recent-title">Recent post</h2>
+  <div class="recent-list">
+    
+      
+        <a href="/MQTT-Broker-with-Rpi3/" class="recent-item" style="background: url(/assets/img/EMQTT.png) center no-repeat; background-size: cover;"><span>eMQTT Broker + Raspberry Pi + Docker</span></a>
+      
+    
+      
+        <a href="/formatting-reference/" class="recent-item" style="background: url(/assets/img/code.jpg) center no-repeat; background-size: cover;"><span>Formatting Reference</span></a>
+      
+    
+  </div>
+</div> <!-- End Recent-Box -->
+
+        <!--
+<div class="newsletter" id="mc_embed_signup">
+  <h2 class="newsletter-title">Newsletter</h2>
+  <div class="form-container">
+    <p>Subscribe here to get our latest updates</p>
+    <form action="//" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <label class="screen-reader-text" for="mce-EMAIL">Email Address</label>
+      <div class="newsletter-box" id="mc_embed_signup_scroll">
+        <input type="email" name="EMAIL" placeholder="Email address" class="email-input" id="mce-EMAIL" required>
+        <input type="submit" value="Subscribe" name="subscribe" class="subscribe-btn" id="mc-embedded-subscribe">
+      </div>
+    </form>
+  </div>
+</div> <!-- End Newsletter -->
+
+        <!--
+<section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//ArmoredBlood.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+      </div>
+    </div> <!-- End Wrapper -->
+  </article>
+  <div class="search-box">
+  <div class="wrapper">
+    <div class="search-grid">
+      <form class="search-form">
+        <div id="search-container">
+          <input type="text" id="search-input" class="search" placeholder="Search">
+        </div>
+      </form>
+      <ul id="results-container" class="results-search"></ul>
+      <div class="icon-close-container">
+        <span class="search-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="main-footer">
+  <div class="copyright">
+    <p>2017 &copy; Aaron Peterson</p>
+  </div>
+</footer> <!-- End Footer -->
+
+</div>
+
+  <!-- JS -->
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/jekyll-search.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    fuzzy: false,
+    exclude: ['Welcome']
+  });
+</script>
+<script src="/assets/js/main.js"></script>
+
+  <!--
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>

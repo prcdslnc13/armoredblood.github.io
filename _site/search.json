@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "eMQTT Broker + Raspberry Pi + Docker",
+      "category" : "",
+      "tags"     : "home_automation, raspberry_pi, docker",
+      "url"      : "/MQTT-Broker-with-Rpi3/",
+      "date"     : "2017-10-28 07:00:20 -0500"
+    } ,
+  
+    {
       "title"    : "Formatting Reference",
       "category" : "",
       "tags"     : "reference",
