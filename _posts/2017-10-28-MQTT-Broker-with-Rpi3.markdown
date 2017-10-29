@@ -10,7 +10,7 @@ author: Aaron Peterson
 Today I started working on actualizing my home automation system that I've been planning for a while. The first step was building a platform that any wifi enabled device can communicate with and post information to. With that brief introduction, let's jump right in.
 
 ## MQTT
-My research pointed towards the MQTT protocol as a lightweight publish/subscribe messaging system. Connected devices can "publish" messages or data to "topics" which other devices can "subscribe" to and be notified with new messages are posted to that topic, much like how you can subscribe to a Youtube channel and be notified when new videos are uploaded.
+My research pointed towards the MQTT protocol as a lightweight publish/subscribe messaging system. Connected devices can "publish" messages or data to "topics" which other devices can "subscribe" to and be notified when new messages are posted to that topic, much like how you can subscribe to a Youtube channel and be notified when new videos are uploaded.
 
 After looking around briefly at different MQTT brokers, I settled on eMQTT over at [emqtt.io](http://emqtt.io/).
 
