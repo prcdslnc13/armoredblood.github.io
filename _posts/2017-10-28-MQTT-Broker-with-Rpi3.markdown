@@ -3,7 +3,7 @@ layout: post
 title: eMQTT Broker + Raspberry Pi + Docker
 date: 2017-10-28 15:00:20 +0300
 description: Guide on how to setup a EMQ message broker in a docker container on a raspberry pi 3 for home automation and IoT experimentation. # Add post description (optional)
-img: EMQTT.png # Add image post (optional)
+img: code.jpg # Add image post (optional)
 tags: [home_automation, raspberry_pi, docker]
 author: Aaron Peterson
 ---
@@ -82,7 +82,7 @@ Select the `Admins` tab on the left, select the `edit` button for the admin user
 (Optional) Select `Plugins` and activate an authentication plugin for posting messages. I used emq_auth_username for basic username:pass authentication.
 
 
-   
+
 That's as far as I've gotten with this setup. EMQ has a lot of plugin extensions and capabilities that I'm not using currently. Down the road I'll be looking into SSL encryption for my messages, but it's another layer of complexity that I have no experience with... yet.
 
 Thanks for reading, I hope you learned as much reading this as I did writing it.
