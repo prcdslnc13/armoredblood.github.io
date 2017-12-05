@@ -22,6 +22,7 @@ Here's a pic of my workflow.
 
 
 If you're interested in my Alteryx workflow, you can download is from [here](https://github.com/ArmoredBlood/armoredblood.github.io/blob/master/assets/img/UFO_Flow.yxmd)
+
 [here's](https://github.com/ArmoredBlood/armoredblood.github.io/blob/master/assets/img/ufo_sightings_scrubbed.csv) my scrubbed UFO file if you want to see how it got cleaned.
 
 While this tool is very intuitive to use for the most part, I struggled to get a basic regular expression node to work, and the expression itself wasn't that complicated.
