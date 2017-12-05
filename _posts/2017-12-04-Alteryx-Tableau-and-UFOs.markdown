@@ -36,7 +36,7 @@ I purchased a Udemy course in the past and have already gone through most of it.
 
 I loaded my csv file into Tableau and starting playing around with the data, seeing what kind of visualizations would be possible with this data. I had a bit of a struggle since it has been a while since I've used it, but I was able to hobble something together in a reasonable amount of time.
 
-Here's my findings from playing around with this dataset:
+Here's my findings from playing around with this dataset. I apologize for the small pictures, public.tableau.com doesn't let you export images of your charts, so I had to use screenshots.
 
 ![total_sightings]({{site.baseurl}}/assets/img/total_sightings.png)
 
