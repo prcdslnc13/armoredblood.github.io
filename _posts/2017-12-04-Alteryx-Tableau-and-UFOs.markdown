@@ -21,7 +21,7 @@ Here's a pic of my workflow.
 ![ufo_flow]({{site.baseurl}}/assets/img/ufo_flow.png)
 
 
-If you're interested in my Alteryx workflow, you can download is from [here](https://github.com/ArmoredBlood/armoredblood.github.io/blob/master/assets/img/UFO_Flow.yxmd)
+If you're interested in my Alteryx workflow, you can download it from [here](https://github.com/ArmoredBlood/armoredblood.github.io/blob/master/assets/img/UFO_Flow.yxmd)
 
 [here's](https://github.com/ArmoredBlood/armoredblood.github.io/blob/master/assets/img/ufo_sightings_scrubbed.csv) my scrubbed UFO file if you want to see how it got cleaned.
 
