@@ -36,18 +36,23 @@ I loaded my csv file into Tableau and starting playing around with the data, see
 
 Here's my findings from playing around with this dataset:
 ![total_sightings]({{site.baseurl}}/assets/img/total_sightings.png)
+
 The US has been killin' it at finding unknown flying stuff
 
 ![time_sightings]({{site.baseurl}}/assets/img/time_sightings.png)
+
 This dataset only goes to 2014, but there was a significant drop that year. I'm curious as to why.
 
 ![duration_sightings]({{site.baseurl}}/assets/img/duration_sightings.png)
+
 The average duration for each sighting was pretty similar between countries.
 
 ![ufo_shapes]({{site.baseurl}}/assets/img/ufo_shapes.png)
+
 A ship of pure light...
 
 ![shapes_us]({{site.baseurl}}/assets/img/shapes_us.png)
+
 I admit this is pretty messy, but shows how varied all these sightings have been.
 
 I don't have a closing statement for this post... it's late and my fingers are getting cold and slow. Thanks for reading.
