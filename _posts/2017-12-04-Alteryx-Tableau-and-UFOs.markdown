@@ -14,7 +14,7 @@ Alteryx does have an OS agnostic web app that you can use for the trial, but I d
 
 It's a fairly intuitive tool to use, I only needed to watch a short youtube video to get familiar with the basic workflow, from there I was able to figure out the different functions of each node by playing around. If you've ever done ETL work in datastage, it's very similar.
 
-After a couple hours of messing around, I came up with this simple data scrubbing workflow that takes in the "raw" UFO sighting data I downloaded from Kaggle, and spits out a nicely formatted .csv file that I can then import into Tableau. Alteryx can output directly to a Talbeau Data Extract file, but alas... I can't use that filetype on public.tableau.com.
+After a couple hours of messing around, I came up with this simple data scrubbing workflow that takes in the "raw" UFO sighting data I downloaded from [Kaggle](https://www.kaggle.com/NUFORC/ufo-sightings/data), and spits out a nicely formatted .csv file that I can then import into Tableau. Alteryx can output directly to a Talbeau Data Extract file, but alas... I can't use that filetype on public.tableau.com.
 
 Here's a pic of my workflow.
 
