@@ -21,6 +21,9 @@ Here's a pic of my workflow.
 ![ufo_flow]({{site.baseurl}}/assets/img/ufo_flow.png)
 
 
+If you're interested in my Alteryx workflow, you can download is from [here][1] [1]:{{ site.url }}/assets/img/UFO_Flow.yxmd
+[here's][2] my scrubbed UFO file if you want to see how it got cleaned. [2]:{{ site.url }}/assets/img/ufo_sightings-scrubbed.csv
+
 While this tool is very intuitive to use for the most part, I struggled to get a basic regular expression node to work, and the expression itself wasn't that complicated.
 
 Another thing to point out is how much the licensing fee is! Holy Cow!
