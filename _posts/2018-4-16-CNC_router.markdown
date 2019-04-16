@@ -13,9 +13,7 @@ This is a quick dump of the progression of my CNC router that started my journey
 #The Beginning
 It started with a variation on the Rockcliff CNC router design that has become so prevalent with the moving bed and fixed gantry. If you click the videos - Audio warning- ITS LOUD. I had no idea what I was doing then haha.
 
-img: /assets/img/router/router1.jpg
-
-
+![Router Alpha - it started it all](/assets/img/router/router1.jpg)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DJcvTEHejpA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
