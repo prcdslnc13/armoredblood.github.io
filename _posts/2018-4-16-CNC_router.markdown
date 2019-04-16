@@ -3,7 +3,7 @@ layout: post
 title: CNC router
 date: 2018-4-16
 description: Quick Dump on the progression of my CNC router builds over 10 yrs
-img: router1.jpg # Add image post (optional)
+img: router\Current_rev.jp # Add image post (optional)
 tags: [cnc, linuxcnc, router, diy, manufacturing]
 author: Joe Spanier
 ---

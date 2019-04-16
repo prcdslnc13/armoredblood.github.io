@@ -3,12 +3,12 @@ layout: post
 title: Laser tutorials and videos!
 date: 2018-4-16
 description: I really like lasers
-img: Lasers/current_day.jpg # Add image post (optional)
+img: Laser/current_day.jpg # Add image post (optional)
 tags: [cnc, smoothie, laser, diy, trocen, emblaser, lightburn]
 author: Joe Spanier
 ---
 
-This is a catalog of all the laser tutorial videos I have made. Most have not been released on my Youtube channel or have any public links back to me other than here, so I though I should compile them somewhere. 
+This is a catalog of all the laser tutorial videos I have made. Most have not been released on my Youtube channel or have any public links back to me other than here, so I though I should compile them somewhere.
 
 
 Emblaser tutorials
