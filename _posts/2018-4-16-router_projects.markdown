@@ -1,9 +1,9 @@
 ---
 layout: post
-title: CNC router
+title: Router Projects Highlight
 date: 2018-4-16
 description: Quick Dump on the progression of my projects created on the over 10 yrs
-img: router1.jpg # Add image post (optional)
+img: rprojects/rcl3.jpg # Add image post (optional)
 tags: [cnc, linuxcnc, router, diy, manufacturing]
 author: Joe Spanier
 ---
