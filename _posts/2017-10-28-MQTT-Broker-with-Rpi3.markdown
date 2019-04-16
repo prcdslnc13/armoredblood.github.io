@@ -5,7 +5,7 @@ date: 2017-10-28 15:00:20 +0300
 description: Guide on how to setup a EMQ message broker in a docker container on a raspberry pi 3 for home automation and IoT experimentation. # Add post description (optional)
 img: code.jpg # Add image post (optional)
 tags: [home_automation, raspberry_pi, docker]
-author: Aaron Peterson
+author: Joe Spanier
 ---
 Today I started working on actualizing my home automation system that I've been planning for a while. The first step was building a platform that any wifi enabled device can communicate with and post information to. With that brief introduction, let's jump right in.
 

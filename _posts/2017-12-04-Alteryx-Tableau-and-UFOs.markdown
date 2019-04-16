@@ -5,7 +5,7 @@ date: 2017-12-04 15:00:20 +0300
 description: I found a dataset on UFO sightings over the past 100 years, scrubbed the data, and did some introductory analysis on the data.
 img: ufo_wallpaper.jpg
 tags: [data, visualization]
-author: Aaron Peterson
+author: Joe Spanier
 ---
 Today I was challenged to find an open dataset and play around with blending the data using Alteryx, a self service data blending and analytics tool. I installed and setup the 14 day trial to get started. I usually learn best by jumping right in.
 
