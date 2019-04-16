@@ -1,5 +1,5 @@
-title: Brain Dump
-email: getmoneygetpaid91@gmail.com
+title: Project Dump
+email: spanierjm@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   This blog is my mental dumping ground for all my random projects
   and interests. It will include posts about maker culture, coding,
@@ -10,26 +10,26 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author settings
-author: Aaron Peterson # add your name
-author-pic: aaron.jpg
-about-author: My name is Aaron Peterson. I make things and share them with others. You should too.
+author: Joe Spanier # add your name
+author-pic: joe.jpg
+about-author: My name is Joe Spanier. I make things, build communities and share them with others. You should too.
 
 # Contact links
-email: getmoneygetpaid91@gmail.com
+email: spanierjm@gmail.com
 phone: # Add your Phone number
-website: github.com/ArmoredBlood
-linkedin: aaron-peterson-80a50633/
-github: ArmoredBlood # Add your Github handle
-twitter:  Analyst_Aaron
+website: github.com/prcdslnc13
+linkedin: joseph-spanier-97234619/
+github: prcdslnc13 # Add your Github handle
+twitter:  prcdslnc13
 facebook: # Add your Facebook handle
-instagram: # Add your Instagram handle
+instagram: nemesis.robotics# Add your Instagram handle
 pinterest: # Add your Pinterest handle
 
 # Newsletter
 mailchimp: # Add your MailChimp form identifier.
 
 # Disqus
-discus_identifier: ArmoredBlood # Add your discus identifier
+discus_identifier: prcdslnc13 # Add your discus identifier
 
 # Tracker
 analytics: # Google Analytics
