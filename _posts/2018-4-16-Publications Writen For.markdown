@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Publicications and contributions
+title: Publications and Contributions
 date: 2018-4-16
 description: Places Ive been published
 img: published/chamController.jpg # Add image post (optional)
