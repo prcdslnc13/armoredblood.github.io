@@ -42,3 +42,5 @@ Curret rev
 The machine as it sits today is fairly unchanged structurally. I have updated the spindle to a 2.2kw brushless spindle, added a tool probe, Touch screen and generally just made it more useful. I've debated on rebuilding it for years but its hard to start a new project when this one has become a tool.
 
 ![Curent Machine](/assets/img/router/Current_rev.jpg)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BQb2byV29nE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
