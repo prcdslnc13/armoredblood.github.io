@@ -35,7 +35,7 @@ These are the pictures I could find from the first rev of the machine. Even thro
 
 Next I found that my gantry was not stiff enough to get the surface finish I wanted on my side walls with acrylic and aluminum so I beefed up the uprights and the bridge
 
-![bridge](/assets/img/router/bridgeupgrade.jpg)
+![bridge](/assets/img/router/Bridgeupgrade.jpg)
 
 Curret rev
 ------
