@@ -2,45 +2,49 @@
 layout: post
 title: CNC router
 date: 2018-4-16
-description: Quick Dump on the progression of my CNC router porjects over 10 yrs
+description: Quick Dump on the progression of my projects created on the over 10 yrs
 img: router1.jpg # Add image post (optional)
 tags: [cnc, linuxcnc, router, diy, manufacturing]
 author: Joe Spanier
 ---
 
-This is a quick dump of the progression of my CNC router that started my journey in home manufacturing.
+A sample of some of the cooler router projects I have done in the last couple years
 
-The Beginning
+Fusion360 Cam Challenge
 ------
-It started with a variation on the Rockcliff CNC router design that has become so prevalent with the moving bed and fixed gantry. I built it with a bench top drill press and a table saw that took circular saw blades. Literally every mechanical part of this machine was from Lowes, from the Nylon wing nuts for lead nuts to the chrome plated "linear" rods haha. But it worked started an obsession.
+This was a Fusion coin for one of the first Fusion360 CAM Challenges. It was a lot of fun to make and a good test of my machine because I had just upgraded the spindle and added mist coolant. I think with some tuning I could have gotten it really nice. But alas, time...
 
-*Fair warning*  If you click the videos - Audio warning- ITS LOUD. I had no idea what I was doing then haha.
+![Cam coin](/assets/img/rprojects/cam1.jpg)
+![Cam coin](/assets/img/rprojects/cam2.jpg)
 
-![Router Alpha - it started it all](/assets/img/router/router1.jpg)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DJcvTEHejpA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rh7oliLlN-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-The Next Gen
+Fuel Catch
 ------
-Next I used that little guy to make my next machine, well as many parts as I could.
+I created a chemical resistant fuel catch for a fire performance festival in Indiana. The whole structure is made from HDPE and routed on a friends 4x8' cnc router. I never got to roll down a hill in it unfortunately but it did recollect several gallons of fuel over the weekend festival
 
-![gantry](/assets/img/router/Gantry.jpg)
-![z axis](/assets/img/router/z-1.jpg)
-![zassembled](/assets/img/router/zassembled.jpg)
-![first gen](/assets/img/router/First_rev.jpg)
+![Fuel dump](/assets/img/rprojects/fuel1.jpg)
+![Fuel dump](/assets/img/rprojects/fuel2.jpg)
+![Fuel dump](/assets/img/rprojects/fuel3.jpg)
 
-These are the pictures I could find from the first rev of the machine. Even through this build process it got re-imagined as I found issues with my designs. But this was the first functional version.
-
-Next I found that my gantry was not stiff enough to get the surface finish I wanted on my side walls with acrylic and aluminum so I beefed up the uprights and the bridge
-
-![bridge](/assets/img/router/Bridgeupgrade.jpg)
-
-Curret rev
+Skella-Stega
 ------
-The machine as it sits today is fairly unchanged structurally. I have updated the spindle to a 2.2kw brushless spindle, added a tool probe, Touch screen and generally just made it more useful. I've debated on rebuilding it for years but its hard to start a new project when this one has become a tool.
+This was a super fun project I did very early on in my CNC journey. I scaled the parts as big as I could to still be able to fit on my 2'x4' machine in its first revision. There was probably 15 hours cut time over two days. It's currently being enjoyed by my friends two lucky little boys.
 
-![Curent Machine](/assets/img/router/Current_rev.jpg)
+![stega](/assets/img/rprojects/StegaCNC.jpg)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BQb2byV29nE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+RCL Community Paint
+------
+I made this on my CNC router at work and put it together as a Community art project for Midwest MakerFest, that I help organize every year. Kids were given a variety of paint, tools, and textures to add to the project. The results are hanging in our Maker Space for all to see.
+
+![rcl](/assets/img/rprojects/rcl1.jpg)
+![rcl](/assets/img/rprojects/rcl2.jpg)
+![rcl](/assets/img/rprojects/rcl3.jpg)
+
+Whiskey City Dressing room
+------
+This is a folding portable dressing room for a local Burlesque troupe I do work for. This was a really fun project to do as it included fabric multiple textures. I wanted it to be a really great back drop for their shows and showcase their branding in a memorable fashion.
+
+![wc](/assets/img/rprojects/wc1.jpg)
+![wc](/assets/img/rprojects/wc2.jpg)
+![wc](/assets/img/rprojects/wc3.jpg)
+![wc](/assets/img/rprojects/wc4.jpg)
+![wc](/assets/img/rprojects/wc5.jpg)
