@@ -37,9 +37,9 @@ This time I did have the time to test the tool head on a smaller printer to tune
 
 The machine didn't work so well at its second show. I lost steps on one of the Z motors and it literally tore itself apart. Sad day. But Mazzzzive will live on...
 
-![Mazzzzive](/assets/img/Mazz2/belts.jpg)
-![Mazzzzive](/assets/img/Mazz2/firstop.jpg)
-![Mazzzzive](/assets/img/Mazz2/secondop.jpg)
-![Mazzzzive](/assets/img/Mazz2/longmelt.jpg)
-![Mazzzzive](/assets/img/Mazz2/wirenest.jpg)
-![Mazzzzive](/assets/img/Mazz2/vase.jpg)
+![Mazzzzive](/assets/img/mazz2/belts.jpg)
+![Mazzzzive](/assets/img/mazz2/firstop.jpg)
+![Mazzzzive](/assets/img/mazz2/secondop.jpg)
+![Mazzzzive](/assets/img/mazz2/longmelt.jpg)
+![Mazzzzive](/assets/img/mazz2/wirenest.jpg)
+![Mazzzzive](/assets/img/mazz2/vase.jpg)
