@@ -20,4 +20,4 @@ When we say we built a makerspace we really mean it. Many of our tools were desi
 
 We also put on the largest makerfest event in down state IL called [Midwest MakerFest](https://prcdslnc13.github.io/MidwestMakerFest/)
 
-Check our space out at [RiverCitylabs]((www.rivercitylabs.space "rcl")
+Check our space out at [RiverCitylabs](https://www.rivercitylabs.space/ "rcl")
