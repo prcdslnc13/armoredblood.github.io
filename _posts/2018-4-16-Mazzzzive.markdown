@@ -3,7 +3,7 @@ layout: post
 title: Mazzzzive
 date: 2018-4-16
 description: My experiment in silliness with 3D printing
-img: \assets\img\Mazz1\finished.jpg # Add image post (optional)
+img: Mazz1\finished.jpg # Add image post (optional)
 tags: [cnc, 3D printing, e3d, diy, manufacturing, tormach, Fusion360]
 author: Joe Spanier
 ---
@@ -33,7 +33,7 @@ Mazzzzive V2
 
 The machine was never supposed to last past that year at MRRF but it was a fun project and still had so many possibilities, but my only real interest was making the machine work at MRRF. So the next year I engineered a new hotend, tripling the melt zone, stiffened the gantry so it would travel better, and changed the Z axis to a belt drive from the threaded rods so that homing the machine didn't take 10 minutes.
 
-This time I did have the time to test the tool head on a smaller printer to tune in the extrusion settings. 
+This time I did have the time to test the tool head on a smaller printer to tune in the extrusion settings.
 
 The machine didn't work so well at its second show. I lost steps on one of the Z motors and it literally tore itself apart. Sad day. But Mazzzzive will live on...
 
