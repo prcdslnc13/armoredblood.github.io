@@ -18,5 +18,4 @@ Make Magazine
 
 OkDo
 -----
-https://www.okdo.com/project/home-automation-for-your-critters/
 [Okdo Home Automation For Your Critters](https://www.okdo.com/project/home-automation-for-your-critters/ "TerrariumPi")
