@@ -12,7 +12,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # Author settings
 author: Joe Spanier # add your name
 author-pic: joe.jpg
-about-author: My name is Joe Spanier. I make machines (and occasionally things with those machines), build communities and share them with others. I am one of the hosts of the podcast [Makers On Tap](https://www.makersontap.com/ "MOT") and a founding member of [RiverCitylabs](https://www.rivercitylabs.space/ "RiverCitylabs").
+about-author: My name is Joe Spanier. I make machines (and occasionally things with those machines), build communities and share them with others. I am one of the hosts of the podcast Makers On Tap and a founding member of RiverCitylabs.
 
 # Contact links
 email: spanierjm@gmail.com

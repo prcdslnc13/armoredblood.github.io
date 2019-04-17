@@ -36,3 +36,8 @@ In order to mitigate mechanical misalignment I decided to build everything onto 
 ![current gen](/assets/img/Laser/current2.jpg)
 ![current gen](/assets/img/Laser/current3.jpg)
 ![current gen](/assets/img/Laser/current4.jpg)
+
+BFL
+----
+
+![BFL](/assets/img/Laser/bfl.jpg)
