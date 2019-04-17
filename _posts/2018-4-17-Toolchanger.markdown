@@ -14,7 +14,7 @@ In early 2018 I started discussing the idea of a tool changing 3D printer with s
 
 This was a project I worked on at Lulzbot for a period and we worked out many of the issues on that project but unfortunately it was shelved.
 
-In comes [e3d-Online](www.e3d-online.com) to the rescue with their toolchanger eco-system. I was pegged early on to be a tester and gave feed back on the early design based on my experience with Lulzbot. On Christmas Eve in 2018 I finally got my machine and the journey began.
+In comes [e3d-Online](https://e3d-online.com/ "e3d") to the rescue with their toolchanger eco-system. I was pegged early on to be a tester and gave feed back on the early design based on my experience with Lulzbot. On Christmas Eve in 2018 I finally got my machine and the journey began.
 
 At the time of writing this my machine is fully functional and able to print with 4 tool heads. I have some ideas for qualifying new tool heads using cameras and some probing switches that I would like to implement over the next few months.
 

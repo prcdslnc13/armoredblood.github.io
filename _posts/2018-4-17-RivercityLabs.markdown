@@ -16,8 +16,8 @@ We are the only makerspace of our kind in the surrounding area and therefore pul
 
 RiverCitylabs runs on a philosophy of "Radical Acts of Sharing" and therefore encourages the use and proliferation of Free (as in speech and beer where appropriate) and Opensource software and hardware.
 
-When we say we built a makerspace we really mean it. Many of our tools were designed and built by our members (including me) and where not we try to buy equipment to support good maker based companies like [Lulzbot](www.lulzbot.com)
+When we say we built a makerspace we really mean it. Many of our tools were designed and built by our members (including me) and where not we try to buy equipment to support good maker based companies like [Lulzbot](https://www.lulzbot.com/ "lulzbot")
 
 We also put on the largest makerfest event in down state IL called [Midwest MakerFest](https://prcdslnc13.github.io/MidwestMakerFest/)
 
-Check our space out at [RiverCitylabs](www.rivercitylabs.space)
+Check our space out at [RiverCitylabs]((www.rivercitylabs.space "rcl")
