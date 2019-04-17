@@ -1,0 +1,32 @@
+---
+layout: post
+title: RCL i4 3D printer
+date: 2018-4-16
+description: Minimal part count v-slot based i3 varient
+img: i4/i4.jpg # Add image post (optional)
+tags: [cnc, 3D printing, e3d, diy, manufacturing, router, Fusion360]
+author: Joe Spanier
+---
+
+
+RCL i4 Origin
+-----
+The goal of the i4 project was to build a low part count, easy to build machine that a class could be taught around, and that as many components could be made in a local makerspace as possible. This was also my first fully committed Fusion360 project. I learned a ton doing the full assembly and CAM in fusion over the couple months I spent designing this machine.
+
+The build uses the following:
+- Frame is 1/2" Baltic Birch plywood to keep cost and weight down All parts from a 2x4' Sheet
+- All printed parts can fit on single build plate
+- All brackets are laser cut from 1/4" Baltic Birch, but can be cut from aluminum or printed as well
+- The build is v-slot based to be as simple to assemble as possible
+
+We arranged a build class on 10 of these printers over 3 build sessions.
+
+All of the source and exisiting documentation can be found on my github at:
+[RCL i4 Github](https://github.com/prcdslnc13/RCL-i4 "RCL i4")
+
+
+![i4](/assets/img/i4/routing.jpg)
+![i4](/assets/img/i4/lasercut.jpg)
+![i4](/assets/img/i4/kitting.jpg)
+![i4](/assets/img/i4/bracket.jpg)
+![i4](/assets/img/i4/i4.jpg)
