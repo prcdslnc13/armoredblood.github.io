@@ -3,7 +3,7 @@ layout: post
 title: RiverCitylabs MakerSpace
 date: 2018-4-17
 description:  RiverCitylabs MakerSpace
-img: makerfest/01.jpg # Add image post (optional)
+img: RCL_cover.jpg # Add image post (optional)
 tags: [ art, diy, makerspace ]
 author: Joe Spanier
 ---
