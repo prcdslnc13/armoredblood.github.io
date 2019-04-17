@@ -3,7 +3,7 @@ layout: post
 title: Makers on Tap Podcast
 date: 2018-4-16
 description: Dives into the podcast
-img: podast/motmrrf.jpg # Add image post (optional)
+img: podcast/motmrrf.jpg # Add image post (optional)
 tags: [ podcast, diy, recording]
 author: Joe Spanier
 ---

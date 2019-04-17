@@ -3,7 +3,7 @@ layout: post
 title: Furniture Projects
 date: 2018-4-16
 description: Furniture Ive built over the last couple years
-img: podast/motmrrf.jpg # Add image post (optional)
+img: Furniture/coaster1.jpg # Add image post (optional)
 tags: [ cnc, diy, laser, Furniture, welding]
 author: Joe Spanier
 ---
