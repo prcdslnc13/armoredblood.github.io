@@ -3,7 +3,7 @@ layout: post
 title: Tormach Specific work
 date: 2018-4-16
 description: Interesting work from the last year on tormach machines
-img: \assets\img\tormach\mill.png # Add image post (optional)
+img: mill.png # Add image post (optional)
 tags: [cnc, linuxcnc, router, diy, manufacturing, tormach, Fusion360, pathpilot]
 author: Joe Spanier
 ---
