@@ -13,9 +13,10 @@ This is a catalog of the different places I have been published.
 
 Make Magazine
 -----
-https://makezine.com/projects/laser-cut-model-sky-special-night-life/
+[Make: Laser Cut Star Map](https://makezine.com/projects/laser-cut-model-sky-special-night-life/ "Star Map")
 
 
 OkDo
 -----
 https://www.okdo.com/project/home-automation-for-your-critters/
+[Okdo Home Automation For Your Critters](https://www.okdo.com/project/home-automation-for-your-critters/ "TerrariumPi")
