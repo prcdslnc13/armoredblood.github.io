@@ -16,15 +16,15 @@ This was a project I worked on at Lulzbot for a period and we worked out many of
 
 In comes [e3d-Online](www.e3d-online.com) to the rescue with their toolchanger eco-system. I was pegged early on to be a tester and gave feed back on the early design based on my experience with Lulzbot. On Christmas Eve in 2018 I finally got my machine and the journey began.
 
-At the time of writing this my machine is fully fuctional and able to print with 4 tool heads. I have some ideas for qualifying new tool heads using cameras and some probing switches that I would like to implement over the next few months.
+At the time of writing this my machine is fully functional and able to print with 4 tool heads. I have some ideas for qualifying new tool heads using cameras and some probing switches that I would like to implement over the next few months.
 
-This project was uniquely rewarding to participate in the beta before because e3d did a fantastic job curating the beta community for people who could provide useful and creative feedback and responses to issues found with the machine. Sanjay said it best at MRRF 2019. "Most of the problems have been solved in 3D printing, so we gave the world a whole bunch of new ones. Have fun" Fun is being had.
+This project was uniquely rewarding to participate in the beta for before because e3d did a fantastic job curating the beta community for people who could provide useful and creative feedback and responses to issues found with the machine. Sanjay said it best at MRRF 2019. "Most of the problems have been solved in 3D printing, so we gave the world a whole bunch of new ones. Have fun" Fun is being had.
 
 One of my contributions to the project was being a supplier for side panels for the kits to users in the US. I need to find a way to continue this.
 
 ![tc](/assets/img/tc/SidePanels.jpg)
 
-This was midway through my first 4 color print. There are definiently issues with the "print" but they were fixed later that week at the Midwest RepRap show
+This was midway through my first 4 color print. There are certainly issues with the "print" but they were fixed later that week at the Midwest RepRap show
 ![tc](/assets/img/tc/midprint.jpg)
 
 First fully successful 4 color print- completed at MRRF 2019
