@@ -3,7 +3,7 @@ layout: post
 title: Mazzzzive
 date: 2018-4-16
 description: My experiment in silliness with 3D printing
-img: Mazz1\finished.jpg # Add image post (optional)
+img: finished.jpg # Add image post (optional)
 tags: [cnc, 3D printing, e3d, diy, manufacturing, tormach, Fusion360]
 author: Joe Spanier
 ---
@@ -25,7 +25,7 @@ It worked. I had 19 days from clicking *file New* to having to have the thing wo
 
 Machining the Z Plates on my router:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BQb2byV29nE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lbu-YCb71mY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 Mazzzzive V2
