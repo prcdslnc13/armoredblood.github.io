@@ -16,7 +16,7 @@ For the last 5 years RiverCitylabs has participated in a local creation faire ca
 
 The next year we were asked to have a bigger role in the faire and take an entire hall in the exhibition center to throw our own MakerFest!! The first year we had about 20 exhibitors from the local area and a couple from surrounding states. That year we increased attendance to 3500 and over 100 total exhibitors.
 
-In the following years we have scaled back the footprint of the festival but increased the content to include the Midwest's largest battlebot competition, code challenges, tech talks and even more exhibitors!! last year we had almost 4000 total attendees and about 125 exhibitors for the entire event. 
+In the following years we have scaled back the footprint of the festival but increased the content to include the Midwest's largest battlebot competition, code challenges, tech talks and even more exhibitors!! last year we had almost 4000 total attendees and about 125 exhibitors for the entire event.
 
 [Ignite Peoria and Midwest MakerFest!!](https://www.artspartners.net/ignite-peoria/)
 

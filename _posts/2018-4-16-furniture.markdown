@@ -37,4 +37,4 @@ AtFab Table
 -----
 ![star](/assets/img/Furniture/atFab1.jpg)
 
-[AtFab](http://atfab.co/?portfolio=one-to-several-table "on-to-several")
+[AtFab](http://atfab.co/?portfolio=one-to-several-table "one-to-several")
