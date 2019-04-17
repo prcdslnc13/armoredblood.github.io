@@ -1,0 +1,22 @@
+---
+layout: post
+title: Makers on Tap Podcast
+date: 2018-4-16
+description: Dives into the podcast
+img: podast/motmrrf.jpg # Add image post (optional)
+tags: [ podcast, diy, recording]
+author: Joe Spanier
+---
+
+
+MakersOnTap Podcast
+-----
+
+In the summer of 2018 two friends and I started a podcast where we try tasty new beers and discuss Maker Space leadership, the Maker Community and navigating it while staying sane and keeping our families together.
+
+It's a weekly podcast and about once a month we bring on leaders in the community and maker businesses and interview them about what drives their contributions to the community.
+
+
+[Makers On Tap](https://www.makersontap.com "MakersOnTap")
+
+![MOT](/assets/img/podcast/joepod.jpg)
