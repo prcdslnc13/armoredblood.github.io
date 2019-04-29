@@ -10,7 +10,7 @@ author: Joe Spanier
 
  RiverCitylabs
 ----
-RiverCitylabs started as a late night talk in a coffee shop after I gave a talk on 3D printing in 2012. Since then has grown to a fully operational 501(c)(3) organization with over 50 full time members and a deeply dedicated board of directors.
+RiverCityLabs started as a late night discussion in a coffee shop after I gave a talk on 3D printing in 2012. Since then has grown to a fully operational 501(c)(3) organization with over 50 full time members and a deeply dedicated board of directors.
 
 We are the only makerspace of our kind in the surrounding area and therefore pull membership from all of our surrounding cities.
 
