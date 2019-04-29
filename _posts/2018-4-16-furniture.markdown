@@ -12,7 +12,7 @@ author: Joe Spanier
 Star table
 -----
 
-First I had to surface the slab
+
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UV_Wwc4p9XQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
